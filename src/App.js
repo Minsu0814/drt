@@ -1,7 +1,7 @@
 import "mapbox-gl/dist/mapbox-gl.css";
 import React, { useState, useEffect, useCallback } from "react";
-import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
-
+import { HashRouter as Router, Route, Routes, Link } from 'react-router-dom';
+// HashRouter BrowserRouter
 import axios from "axios";
 
 import Splash from "./components/Splash";
