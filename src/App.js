@@ -7,6 +7,7 @@ import axios from "axios";
 import Splash from "./components/Splash";
 import Trip from "./components/Trip";
 import Path from "./components/Path";
+import Home from "./components/Home";
 
 import "./css/app.css";
 
@@ -80,6 +81,7 @@ const App = () => {
         {!isloaded && <Splash />}
         {isloaded && (
           <Routes>
+            <Route path="/" element={<Home />} />
             <Route path="/trip" element={<Trip trips={trips} icon={icon} line={line} kickboard={kickboard} />} />
             <Route path="/path" element={<Path trips={trips} />} />
           </Routes>

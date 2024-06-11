@@ -8,7 +8,6 @@ import {AmbientLight, PointLight, LightingEffect} from '@deck.gl/core';
 import { PathLayer } from "@deck.gl/layers";
 
 
-import {Slider} from '@mui/material';
 import legend from "../image/legend.png";
 import "../css/trip.css";
 
@@ -75,30 +74,6 @@ const returnAnimationTime = (time) => {
     }
   };
   
-  const addZeroFill = (value) => {
-    const valueString = value.toString();
-    return valueString.length < 2 ? "0" + valueString : valueString;
-  };
-  
-  const returnAnimationDisplayTime = (time) => {
-    const hour = addZeroFill(parseInt((Math.round(time) / 60) % 24));
-    const minute = addZeroFill(Math.round(time) % 60);
-    return [hour, minute];
-  };
-  
-  const currData = (data, time) => {
-    const arr = [];
-    data.forEach((v) => {
-      const timestamp = v.timestamp;
-      const s_t = timestamp[0];
-      const e_t = timestamp[timestamp.length - 1];
-      if (s_t <= time && e_t >= time) {
-        arr.push(v);
-      }
-    });
-    return arr;
-  };
-
 
 const Trip = (props) => {
   const [time, setTime] = useState(minTime);
@@ -144,13 +119,6 @@ const Trip = (props) => {
    
   ];
   
-  const SliderChange = (value) => {
-    const time = value.target.value;
-    setTime(time);
-  };
-
-  const [hour, minute] = returnAnimationDisplayTime(time);
-
   return (
     <div className="trip-container" style={{ position: "relative" }}>
       <DeckGL
@@ -161,15 +129,6 @@ const Trip = (props) => {
       >
         <Map mapStyle={mapStyle} mapboxAccessToken={MAPBOX_TOKEN} preventStyleDiffing={true}/>
       </DeckGL>
-      <h1 className="time">TIME : {`${hour} : ${minute}`}</h1>
-      <Slider
-        id="slider"
-        value={time}
-        min={minTime}
-        max={maxTime}
-        onChange={SliderChange}
-        track="inverted"
-      />
       <img className="legend" src={legend} alt="legend" ></img>
     </div>
   );

@@ -67,7 +67,7 @@ const ICON_MAPPING = {
 
 const minTime = 540;
 const maxTime = 800;
-const animationSpeed = 1;
+const animationSpeed = 2.5;
 const mapStyle = "mapbox://styles/spear5306/ckzcz5m8w002814o2coz02sjc";
 const MAPBOX_TOKEN = `pk.eyJ1Ijoic2hlcnJ5MTAyNCIsImEiOiJjbG00dmtic3YwbGNoM2Zxb3V5NmhxZDZ6In0.ZBrAsHLwNihh7xqTify5hQ`;
 
@@ -172,7 +172,7 @@ const Trip = (props) => {
       widthMinPixels: 5,
       rounded: true,
       fadeTrail: true,
-      trailLength : 20,
+      trailLength : 5,
       currentTime: time,
       shadowEnabled: false
     }),
