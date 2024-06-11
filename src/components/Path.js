@@ -5,8 +5,7 @@ import DeckGL from '@deck.gl/react';
 import {Map} from 'react-map-gl';
 
 import {AmbientLight, PointLight, LightingEffect} from '@deck.gl/core';
-import {TripsLayer} from '@deck.gl/geo-layers';
-import {ScatterplotLayer, IconLayer, PathLayer } from "@deck.gl/layers";
+import { PathLayer } from "@deck.gl/layers";
 
 
 import {Slider} from '@mui/material';
@@ -61,9 +60,6 @@ const INITIAL_VIEW_STATE = {
   bearing: 0
 };
 
-const ICON_MAPPING = {
-    marker: { x: 0, y: 0, width: 128, height: 128, mask: true },
-};
 
 const minTime = 540;
 const maxTime = 800;
@@ -108,14 +104,9 @@ const Trip = (props) => {
   const [time, setTime] = useState(minTime);
   const [animation] = useState({});
 
-  // const kick_OO = currData(props.kick_OO, time);
-  
-  const icon = props.icon;
-  const line = props.line;
 
   const trips = props.trips;
 
-  const kickboard = currData(props.kickboard, time);
 
   const animate = useCallback(() => {
     setTime(returnAnimationTime);

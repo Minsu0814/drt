@@ -81,7 +81,7 @@ const App = () => {
         {isloaded && (
           <Routes>
             <Route path="/trip" element={<Trip trips={trips} icon={icon} line={line} kickboard={kickboard} />} />
-            <Route path="/path" element={<Path trips={trips} icon={icon} line={line} kickboard={kickboard} />} />
+            <Route path="/path" element={<Path trips={trips} />} />
           </Routes>
         )}
       </div>
