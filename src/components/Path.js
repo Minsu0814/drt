@@ -102,7 +102,8 @@ const Trip = (props) => {
       getColor: d => 
         {
           const vendorColorMap = {
-            "WALK" : [36, 143, 223], 
+            // "WALK" : [36, 143, 223], 
+            "WALK" : [255, 72, 72], 
             "SUBWAY" : [254, 198, 39],   
             "BUS" : [44, 170, 159], 
             "KICKBOARD" : [255, 255, 255],

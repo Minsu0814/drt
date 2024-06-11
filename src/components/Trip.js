@@ -161,7 +161,8 @@ const Trip = (props) => {
       getColor: d => 
         {
           const vendorColorMap = {
-            "WALK" : [36, 143, 223], 
+            // "WALK" : [36, 143, 223], 
+            "WALK" : [255, 72, 72], 
             "SUBWAY" : [254, 198, 39],   
             "BUS" : [44, 170, 159], 
             "KICKBOARD" : [255, 255, 255],
@@ -189,8 +190,8 @@ const Trip = (props) => {
       getPosition: (d) => d.loc,
       getColor: (d) => 
         // [255, 0, 255],
-        d.BorN === 0 ? [255, 255, 0] : [255, 0, 255],
-      opacity: 0.3,
+        d.BorN === 0 ? [255, 72, 72] : [255, 255, 255],
+      opacity: 0.9,
       pickable: false,
       radiusMinPixels: 2,
       radiusMaxPixels: 2,
