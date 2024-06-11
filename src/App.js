@@ -12,7 +12,7 @@ import "./css/app.css";
 
 const fetchData = (FilE_NAME) => {
   const res = axios.get(
-    `https://raw.githubusercontent.com/1023sherry/kickboard/main/kickboard/src/data/${FilE_NAME}.json`
+    `https://raw.githubusercontent.com/1023sherry/kickboard/main/src/data/${FilE_NAME}.json`
   );
   const data = res.then((r) => r.data);
   return data;
