@@ -1,6 +1,6 @@
 import "mapbox-gl/dist/mapbox-gl.css";
 import React, { useState, useEffect, useCallback } from "react";
-import { HashRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import { HashRouter as Router, Route, Routes } from 'react-router-dom';
 // HashRouter BrowserRouter
 import axios from "axios";
 
@@ -8,6 +8,7 @@ import Splash from "./components/Splash";
 import Trip from "./components/Trip";
 import Path from "./components/Path";
 import Home from "./components/Home";
+import Nav from "./components/Nav";
 
 import "./css/app.css";
 
@@ -23,8 +24,10 @@ const App = () => {
   const [icon, setIcon] = useState([]);
   const [line, setLine] = useState([]);
   const [kickboard, setKickboard] = useState([]);
-
   const [trips, setTrips] = useState([]);
+
+
+
 
   const [isloaded, setIsLoaded] = useState(false);
 
@@ -37,14 +40,11 @@ const App = () => {
       fetchData("walk_DD_40"),
       fetchData("pt_OD_40")
     ])
-    
     const KICKBOARD = await fetchData("people_location_40");
-    
     const ICON = await Promise.all([
       fetchData("bus_icon"),
       fetchData("trail_icon"),
     ]);
-
     const LINE = await Promise.all([
       fetchData("bus_line"),
       fetchData("trail_line"),
@@ -54,9 +54,10 @@ const App = () => {
     setIcon((prev) => ICON.flat());
     setLine((prev) => LINE.flat());
     setTrips((prev) => TRIPS.flat())
-
     setKickboard((prev) => KICKBOARD);
  
+
+
 
     setIsLoaded(true);
   }, []);
@@ -67,17 +68,8 @@ const App = () => {
 
   return (
     <Router>
-      <div className="App">
-        <nav>
-          <ul>
-            <li>
-              <Link to="/trip">Triplayer</Link>
-            </li>
-            <li>
-              <Link to="/path">PathLayer</Link>
-            </li>
-          </ul>
-        </nav>
+      <div className="App"> 
+        <Nav />  
         {!isloaded && <Splash />}
         {isloaded && (
           <Routes>
