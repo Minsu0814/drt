@@ -110,12 +110,12 @@ const Trip = (props) => {
 
   // const kick_OO = currData(props.kick_OO, time);
   
-  const icon = props.icon;
-  const line = props.line;
+  // const icon = props.icon;
+  // const line = props.line;
 
   const trips = props.trips;
 
-  const kickboard = currData(props.kickboard, time);
+  const people = currData(props.people, time);
 
   const animate = useCallback(() => {
     setTime(returnAnimationTime);
@@ -128,47 +128,37 @@ const Trip = (props) => {
   }, [animation, animate]);
 
   const layers = [
-    new PathLayer({  
-      id: 'lines',
-      data: line,
-      getPath: d => d.line,
-      // getColor: d => d.color,
-      getColor: d => [150,150,150],
-      opacity: 0.01,
-      widthMinPixels: 1,
-      widthScale: 1,
-      pickable: true,  
-      rounded: true,
-      shadowEnabled: false
-    }),
-    new ScatterplotLayer({
-      id: "icon",
-      data: icon,
-      getPosition: (d) => d.coordinates,
-      getFillColor: (d) => d.color,
-      getRadius: (d) => 5,
-      opacity: 0.1,
-      pickable: false,
-      radiusMinPixels: 1,
-      radiusMaxPixels: 5,
-    }),
+    // new PathLayer({  
+    //   id: 'lines',
+    //   data: line,
+    //   getPath: d => d.line,
+    //   // getColor: d => d.color,
+    //   getColor: d => [150,150,150],
+    //   opacity: 0.01,
+    //   widthMinPixels: 1,
+    //   widthScale: 1,
+    //   pickable: true,  
+    //   rounded: true,
+    //   shadowEnabled: false
+    // }),
+    // new ScatterplotLayer({
+    //   id: "icon",
+    //   data: icon,
+    //   getPosition: (d) => d.coordinates,
+    //   getFillColor: (d) => d.color,
+    //   getRadius: (d) => 5,
+    //   opacity: 0.1,
+    //   pickable: false,
+    //   radiusMinPixels: 1,
+    //   radiusMaxPixels: 5,
+    // }),
 
     new TripsLayer({  
       id: 'trips',
       data: trips,
       getPath: d => d.route,
       getTimestamps: d => d.timestamp,
-      getColor: d => 
-        {
-          const vendorColorMap = {
-            // "WALK" : [36, 143, 223], 
-            "WALK" : [255, 72, 72], 
-            "SUBWAY" : [254, 198, 39],   
-            "BUS" : [44, 170, 159], 
-            "KICKBOARD" : [255, 255, 255],
-          };
-          return vendorColorMap[d.mode] || [255, 255, 50];
-        },
+      getColor: d => [255.255,200],
       opacity: 1,
       widthMinPixels: 5,
       rounded: true,

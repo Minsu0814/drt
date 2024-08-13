@@ -21,9 +21,9 @@ const fetchData = (FilE_NAME) => {
 };
 
 const App = () => {
-  const [icon, setIcon] = useState([]);
-  const [line, setLine] = useState([]);
-  const [kickboard, setKickboard] = useState([]);
+  // const [icon, setIcon] = useState([]);
+  // const [line, setLine] = useState([]);
+  const [people, setPeople] = useState([]);
   const [trips, setTrips] = useState([]);
 
 
@@ -34,27 +34,25 @@ const App = () => {
   const getData = useCallback(async () => {
 
     const TRIPS =  await Promise.all([
-      fetchData("kick_OO_40"),
-      fetchData("kick_DD_40"),
-      fetchData("walk_OO_40"),
-      fetchData("walk_DD_40"),
-      fetchData("pt_OD_40")
+      fetchData("trip"),
     ])
-    const KICKBOARD = await fetchData("people_location_40");
-    const ICON = await Promise.all([
-      fetchData("bus_icon"),
-      fetchData("trail_icon"),
-    ]);
-    const LINE = await Promise.all([
-      fetchData("bus_line"),
-      fetchData("trail_line"),
-    ]);
+    const PEOPLE = await fetchData("people");
+
+    // const ICON = await Promise.all([
+    //   fetchData("bus_icon"),
+    //   fetchData("trail_icon"),
+    // ]);
+
+    // const LINE = await Promise.all([
+    //   fetchData("bus_line"),
+    //   fetchData("trail_line"),
+    // ]);
 
 
-    setIcon((prev) => ICON.flat());
-    setLine((prev) => LINE.flat());
+    // setIcon((prev) => ICON.flat());
+    // setLine((prev) => LINE.flat());
     setTrips((prev) => TRIPS.flat())
-    setKickboard((prev) => KICKBOARD);
+    setPeople((prev) => PEOPLE);
  
 
 
@@ -74,7 +72,13 @@ const App = () => {
         {isloaded && (
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/trip" element={<Trip trips={trips} icon={icon} line={line} kickboard={kickboard} />} />
+            <Route path="/trip" element={<Trip 
+                                                trips={trips}
+                                                people={people} 
+                                                // icon={icon}
+                                                // line={line}
+                                                
+                                                />} />
             <Route path="/path" element={<Path trips={trips} />} />
           </Routes>
         )}
