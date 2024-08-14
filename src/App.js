@@ -37,7 +37,7 @@ const App = () => {
       fetchData("trip"),
     ])
     
-    const PEOPLE = await fetchData("people");
+    const PEOPLE = await fetchData("people_location_40");
 
     // const ICON = await Promise.all([
     //   fetchData("bus_icon"),
