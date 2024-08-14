@@ -14,7 +14,7 @@ import "./css/app.css";
 
 const fetchData = (FilE_NAME) => {
   const res = axios.get(
-    `https://raw.githubusercontent.com/1023sherry/kickboard/main/src/data/${FilE_NAME}.json`
+    `https://raw.githubusercontent.com/1023sherry/drt/main/src/data/${FilE_NAME}.json`
   );
   const data = res.then((r) => r.data);
   return data;
@@ -36,6 +36,7 @@ const App = () => {
     const TRIPS =  await Promise.all([
       fetchData("trip"),
     ])
+    
     const PEOPLE = await fetchData("people");
 
     // const ICON = await Promise.all([

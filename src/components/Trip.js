@@ -52,8 +52,8 @@ const DEFAULT_THEME = {
 };
 
 const INITIAL_VIEW_STATE = { 
-  longitude: 126.98, // 126.98 , -74
-  latitude: 37.57, // 37.57 , 40.72
+  longitude: 126.943466, // 126.98 , -74
+  latitude: 37.287209, // 37.57 , 40.72
   zoom: 11,
   pitch: 20,
   minZoom: 5,
@@ -65,9 +65,9 @@ const ICON_MAPPING = {
     marker: { x: 0, y: 0, width: 128, height: 128, mask: true },
 };
 
-const minTime = 540;
-const maxTime = 800;
-const animationSpeed = 2.5;
+const minTime = 300;
+const maxTime = 1200;
+const animationSpeed = 1;
 const mapStyle = "mapbox://styles/spear5306/ckzcz5m8w002814o2coz02sjc";
 const MAPBOX_TOKEN = `pk.eyJ1Ijoic2hlcnJ5MTAyNCIsImEiOiJjbG00dmtic3YwbGNoM2Zxb3V5NmhxZDZ6In0.ZBrAsHLwNihh7xqTify5hQ`;
 
@@ -116,6 +116,7 @@ const Trip = (props) => {
   const trips = props.trips;
 
   const people = currData(props.people, time);
+  // const people = props.people; 
 
   const animate = useCallback(() => {
     setTime(returnAnimationTime);
@@ -158,7 +159,7 @@ const Trip = (props) => {
       data: trips,
       getPath: d => d.route,
       getTimestamps: d => d.timestamp,
-      getColor: d => [255.255,200],
+      getColor: d => [255, 255, 200],
       opacity: 1,
       widthMinPixels: 5,
       rounded: true,
@@ -170,7 +171,7 @@ const Trip = (props) => {
 
     new IconLayer({
       id: "ps",
-      data: kickboard,
+      data: people,
       sizeScale: 10,
       iconAtlas:
         "https://raw.githubusercontent.com/visgl/deck.gl-data/master/website/icon-atlas.png",
@@ -178,9 +179,8 @@ const Trip = (props) => {
       getIcon: (d) => "marker",
       getSize: (d) => 1,
       getPosition: (d) => d.loc,
-      getColor: (d) => 
-        // [255, 0, 255],
-        d.BorN === 0 ? [255, 72, 72] : [255, 255, 255],
+      getColor: (d) => [255, 73, 73],
+        // d.BorN === 0 ? [255, 72, 72] : [255, 255, 255],
       opacity: 0.9,
       pickable: false,
       radiusMinPixels: 2,
