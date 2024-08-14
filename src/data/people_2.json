@@ -1,0 +1,290 @@
+[
+    {
+        "original_vehicle": 1,
+        "pickup_station": 501,
+        "loc": [
+            126.943466,
+            37.287209
+        ],
+        "timestamp": [
+            345.18333333333334,
+            355.18333333333334
+        ]
+    },
+    {
+        "original_vehicle": 1,
+        "pickup_station": 503,
+        "loc": [
+            126.940552,
+            37.290955
+        ],
+        "timestamp": [
+            343.03333333333336,
+            356.64
+        ]
+    },
+    {
+        "original_vehicle": 2,
+        "pickup_station": 503,
+        "loc": [
+            126.940552,
+            37.290955
+        ],
+        "timestamp": [
+            356.26666666666665,
+            366.26666666666665
+        ]
+    },
+    {
+        "original_vehicle": 2,
+        "pickup_station": 503,
+        "loc": [
+            126.940552,
+            37.290955
+        ],
+        "timestamp": [
+            356.26666666666665,
+            366.26666666666665
+        ]
+    },
+    {
+        "original_vehicle": 5,
+        "pickup_station": 501,
+        "loc": [
+            126.943466,
+            37.287209
+        ],
+        "timestamp": [
+            436.6,
+            446.8
+        ]
+    },
+    {
+        "original_vehicle": 5,
+        "pickup_station": 501,
+        "loc": [
+            126.943466,
+            37.287209
+        ],
+        "timestamp": [
+            436.8,
+            446.8
+        ]
+    },
+    {
+        "original_vehicle": 10,
+        "pickup_station": 501,
+        "loc": [
+            126.943466,
+            37.287209
+        ],
+        "timestamp": [
+            599.2166666666667,
+            618.4333333333333
+        ]
+    },
+    {
+        "original_vehicle": 10,
+        "pickup_station": 501,
+        "loc": [
+            126.943466,
+            37.287209
+        ],
+        "timestamp": [
+            608.4333333333333,
+            618.4333333333333
+        ]
+    },
+    {
+        "original_vehicle": 11,
+        "pickup_station": 502,
+        "loc": [
+            126.940224,
+            37.28743
+        ],
+        "timestamp": [
+            646.8166666666667,
+            656.8166666666667
+        ]
+    },
+    {
+        "original_vehicle": 11,
+        "pickup_station": 502,
+        "loc": [
+            126.940224,
+            37.28743
+        ],
+        "timestamp": [
+            646.8166666666667,
+            656.8166666666667
+        ]
+    },
+    {
+        "original_vehicle": 12,
+        "pickup_station": 502,
+        "loc": [
+            126.940224,
+            37.28743
+        ],
+        "timestamp": [
+            677.4833333333333,
+            687.4833333333333
+        ]
+    },
+    {
+        "original_vehicle": 12,
+        "pickup_station": 504,
+        "loc": [
+            126.940704,
+            37.292248
+        ],
+        "timestamp": [
+            676.6333333333333,
+            688.36
+        ]
+    },
+    {
+        "original_vehicle": 13,
+        "pickup_station": 501,
+        "loc": [
+            126.943466,
+            37.287209
+        ],
+        "timestamp": [
+            703.1666666666666,
+            713.1666666666666
+        ]
+    },
+    {
+        "original_vehicle": 13,
+        "pickup_station": 502,
+        "loc": [
+            126.940224,
+            37.28743
+        ],
+        "timestamp": [
+            701.4833333333333,
+            713.9966666666667
+        ]
+    },
+    {
+        "original_vehicle": 14,
+        "pickup_station": 502,
+        "loc": [
+            126.940224,
+            37.28743
+        ],
+        "timestamp": [
+            743.7833333333333,
+            753.7833333333333
+        ]
+    },
+    {
+        "original_vehicle": 14,
+        "pickup_station": 504,
+        "loc": [
+            126.940704,
+            37.292248
+        ],
+        "timestamp": [
+            736.9,
+            754.66
+        ]
+    },
+    {
+        "original_vehicle": 18,
+        "pickup_station": 501,
+        "loc": [
+            126.943466,
+            37.287209
+        ],
+        "timestamp": [
+            805.9166666666666,
+            817.7833333333333
+        ]
+    },
+    {
+        "original_vehicle": 18,
+        "pickup_station": 501,
+        "loc": [
+            126.943466,
+            37.287209
+        ],
+        "timestamp": [
+            807.7833333333333,
+            817.7833333333333
+        ]
+    },
+    {
+        "original_vehicle": 21,
+        "pickup_station": 502,
+        "loc": [
+            126.940224,
+            37.28743
+        ],
+        "timestamp": [
+            915.65,
+            936.0333333333333
+        ]
+    },
+    {
+        "original_vehicle": 21,
+        "pickup_station": 503,
+        "loc": [
+            126.940552,
+            37.290955
+        ],
+        "timestamp": [
+            926.0333333333333,
+            936.0333333333333
+        ]
+    },
+    {
+        "original_vehicle": 22,
+        "pickup_station": 501,
+        "loc": [
+            126.943466,
+            37.287209
+        ],
+        "timestamp": [
+            974.0333333333333,
+            984.0333333333333
+        ]
+    },
+    {
+        "original_vehicle": 22,
+        "pickup_station": 501,
+        "loc": [
+            126.943466,
+            37.287209
+        ],
+        "timestamp": [
+            974.0333333333333,
+            984.0333333333333
+        ]
+    },
+    {
+        "original_vehicle": 23,
+        "pickup_station": 502,
+        "loc": [
+            126.940224,
+            37.28743
+        ],
+        "timestamp": [
+            995.9,
+            1005.9
+        ]
+    },
+    {
+        "original_vehicle": 23,
+        "pickup_station": 502,
+        "loc": [
+            126.940224,
+            37.28743
+        ],
+        "timestamp": [
+            995.9,
+            1005.9
+        ]
+    }
+]
