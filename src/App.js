@@ -34,10 +34,14 @@ const App = () => {
   const getData = useCallback(async () => {
 
     const TRIPS =  await Promise.all([
-      fetchData("trip"),
+      fetchData("trip_1"),
+      fetchData("trip_2"),
     ])
     
-    const PEOPLE = await fetchData("people");
+    const PEOPLE = await Promise.all([
+      fetchData("people_1"),
+      fetchData("people_2"),
+    ])
       
 
     // const ICON = await Promise.all([
@@ -54,7 +58,7 @@ const App = () => {
     // setIcon((prev) => ICON.flat());
     // setLine((prev) => LINE.flat());
     setTrips((prev) => TRIPS.flat())
-    setPeople((prev) => PEOPLE);
+    setPeople((prev) => PEOPLE.flat());
  
 
 

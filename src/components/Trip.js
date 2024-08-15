@@ -67,7 +67,7 @@ const ICON_MAPPING = {
 
 const minTime = 300;
 const maxTime = 1200;
-const animationSpeed = 1;
+const animationSpeed = 0.5;
 const mapStyle = "mapbox://styles/spear5306/ckzcz5m8w002814o2coz02sjc";
 const MAPBOX_TOKEN = `pk.eyJ1Ijoic2hlcnJ5MTAyNCIsImEiOiJjbG00dmtic3YwbGNoM2Zxb3V5NmhxZDZ6In0.ZBrAsHLwNihh7xqTify5hQ`;
 
@@ -114,6 +114,7 @@ const Trip = (props) => {
   // const line = props.line;
 
   const trips = props.trips;
+  // const trips = currData(props.trips, time);
 
   const people = currData(props.people, time);
   // const people = props.people; 
@@ -164,7 +165,7 @@ const Trip = (props) => {
       widthMinPixels: 5,
       rounded: true,
       fadeTrail: true,
-      trailLength : 5,
+      trailLength : 1,
       currentTime: time,
       shadowEnabled: false
     }),
